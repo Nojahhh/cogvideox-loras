@@ -22,24 +22,35 @@ For a detailed list of available LoRA models, please refer to the [LORA_MODELS.m
 Contributions are welcome! If you would like to contribute to this repository, please follow these steps:
 1. **Fork the Repository**: Click the "Fork" button at the top right of the repository page.
 
-2. **Create a New Branch** for your feature or bug fix:
+2. **Clone Your Fork** to your local machine:
   ```bash
-  git checkout -b feature/your-feature-name
+  git clone https://github.com/your-username/cogvideox-loras.git
   ```
 
-3. **Make Your Changes** and commit them:
+3. **Navigate to the Repository Directory**:
   ```bash
-  git commit -m "Add your commit message"
+  cd cogvideox-loras
   ```
 
-4. **Push to the Branch**:
+4. **Run the `add_new_lora.py` Script** to add a new LoRA model:
   ```bash
-  git push origin feature/your-feature-name
+  python add_new_lora.py
   ```
 
-5. **Open a Pull Request** detailing your changes.
+  This script will fetch model data from Hugging Face and append it to the `LORA_MODELS.md` file.
 
-Additionally, you can use the `add_new_lora.py` script to automate the process of adding new LoRA models to the repository. This script fetches model data from Hugging Face and appends it to the `LORA_MODELS.md` file.
+5. **Commit Your Changes**:
+  ```bash
+  git add LORA_MODELS.md
+  git commit -m "Added new LoRA to list"
+  ```
+
+6. **Push to Your Fork**:
+  ```bash
+  git push origin main
+  ```
+
+7. **Open a Pull Request** detailing your changes.
 
 ## License
 This project is licensed under the GNU General Public License v3.0. See the LICENSE file for more information.
