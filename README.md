@@ -39,7 +39,7 @@ Contributions are welcome! If you would like to contribute to this repository, p
 
 5. **Open a Pull Request** detailing your changes.
 
-**Note**: Follow the guidelines already set in [LORA_MODELS.md](LORA_MODELS.md).
+Additionally, you can use the `add_new_lora.py` script to automate the process of adding new LoRA models to the repository. This script fetches model data from Hugging Face and appends it to the `LORA_MODELS.md` file.
 
 ## License
 This project is licensed under the GNU General Public License v3.0. See the LICENSE file for more information.
