@@ -47,6 +47,7 @@ def main():
   while True:
     description = input("Enter the description of the LoRA model (max 250 characters): ")
     if len(description) <= 250:
+      description = description.replace("|", "/").replace("\n", " ").replace("\r", " ").replace('"', "'")
       break
     print("Error: Description must be 250 characters or less. Please try again.")
   
