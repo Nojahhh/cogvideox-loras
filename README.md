@@ -3,8 +3,8 @@
 **CogVideoX-LoRAs** is a centralized repository for all LoRA (Low-Rank Adaptation) models created for **CogVideoX**. This project addresses the need for a unified platform to collect, share, and contribute to various LoRA models, making it easier for users, developers, and researchers to enhance their video generation workflows.
 
 ## Table of Contents
+- [Features](#features)
 - [LoRA Models](#lora-models)
-- [Getting Started](#getting-started)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
