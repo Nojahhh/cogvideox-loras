@@ -47,6 +47,13 @@ Contributions are welcome! If you would like to contribute to this repository, p
 
 5. **Open a Pull Request** detailing your changes.
 
+**Note**: Follow the guidelines already set in [LORA_MODELS.md](LORA_MODELS.md).
+
+## LoRA Models
+For a detailed list of available LoRA models, please refer to the [LORA_MODELS.md](LORA_MODELS.md) file in the repository.
+
+**Note**: Follow the guidelines already set in LORA_MODELS.md.
+
 ## License
 This project is licensed under the MIT License. See the LICENSE file for more information.
 
