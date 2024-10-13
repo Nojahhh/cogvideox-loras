@@ -21,7 +21,7 @@ To get started with CogVideoX-LoRAs:
 1. **Clone the Repository**: 
    ```bash
    git clone https://github.com/yourusername/cogvideox-loras.git
-   ´´´
+   ```
 2. **Install Dependencies**: Follow the installation instructions for CogVideoX to set up your environment.
 
 3. **Explore the Models**: Browse the available LoRA models in the repository.
