@@ -32,7 +32,7 @@ Contributions are welcome! If you would like to contribute to this repository, p
   cd cogvideox-loras
   ```
 
-4. **Run the `add_new_lora.py` Script** to add a new LoRA model:
+4. **Run the `add_new_lora.py` Script** to add a new LoRA model (only HF-Link and description needed):
   ```bash
   python add_new_lora.py
   ```
