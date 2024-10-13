@@ -42,7 +42,7 @@ Contributions are welcome! If you would like to contribute to this repository, p
 **Note**: Follow the guidelines already set in [LORA_MODELS.md](LORA_MODELS.md).
 
 ## License
-This project is licensed under the MIT License. See the LICENSE file for more information.
+This project is licensed under the GNU General Public License v3.0. See the LICENSE file for more information.
 
 ## Contact
 For inquiries or feedback, please contact [mellin.johan@gmail.com].
