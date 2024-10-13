@@ -35,15 +35,14 @@ def get_model_data_from_huggingface(link):
       'base_model': 'Unknown'
     }
 
-def add_lora_to_list(name, link, description, base_model, contributor, date_created, last_modified, date_added):
-  entry = f"| {name} | [{link.split('/')[-2]+'/'+link.split('/')[-1]}]({link}) | {description} | [{base_model.split('/')[-2]+'/'+base_model.split('/')[-1]}]({'https://huggingface.co/'+base_model}) | {contributor} | {date_created} | {last_modified} | {date_added} |\n"
+def add_lora_to_list(link, description, base_model, contributor, date_created, last_modified, date_added):
+  entry = f"| [{link.split('/')[-2]+'/'+link.split('/')[-1]}]({link}) | {description} | [{base_model.split('/')[-2]+'/'+base_model.split('/')[-1]}]({'https://huggingface.co/'+base_model}) | {contributor} | {date_created} | {last_modified} | {date_added} |\n"
   
   with open("LORA_MODELS.md", "a") as file:
     file.write(entry)
 
 def main():
   link = input("Enter the Hugging Face link of the LoRA model: ")
-  name = link.split('/')[-2]+'/'+link.split('/')[-1]
   
   while True:
     description = input("Enter the description of the LoRA model (max 250 characters): ")
@@ -58,7 +57,7 @@ def main():
   date_created = model_data['created_at']
   date_added = datetime.date.today().strftime("%Y-%m-%d")
 
-  add_lora_to_list(name, link, description, base_model, contributor, date_created, last_modified, date_added)
+  add_lora_to_list(link, description, base_model, contributor, date_created, last_modified, date_added)
 
 if __name__ == "__main__":
   main()
