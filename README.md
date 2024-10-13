@@ -24,7 +24,7 @@ Contributions are welcome! If you would like to contribute to this repository, p
 
 2. **Clone Your Fork** to your local machine:
   ```bash
-  git clone https://github.com/Nojahhh/cogvideox-loras.git
+  git clone https://github.com/your-username/cogvideox-loras.git
   ```
 
 3. **Navigate to the Repository Directory**:
