@@ -3,7 +3,7 @@
 **CogVideoX-LoRAs** is a centralized repository for all LoRA (Low-Rank Adaptation) models created for **CogVideoX**. This project addresses the need for a unified platform to collect, share, and contribute to various LoRA models, making it easier for users, developers, and researchers to enhance their video generation workflows.
 
 ## Table of Contents
-- [Features](#features)
+- [LoRA Models](#lora-models)
 - [Getting Started](#getting-started)
 - [Contributing](#contributing)
 - [License](#license)
@@ -15,16 +15,8 @@
 - **Easy Access**: Clear organization and categorization of LoRA models for easy discovery and usage.
 - **Up-to-Date Listings**: Regularly updated with the latest LoRA models, ensuring this repository remains the go-to source for CogVideoX customizations.
 
-## Getting Started
-To get started with CogVideoX-LoRAs:
-
-1. **Clone the Repository**: 
-   ```bash
-   git clone https://github.com/yourusername/cogvideox-loras.git
-   ```
-2. **Install Dependencies**: Follow the installation instructions for CogVideoX to set up your environment.
-
-3. **Explore the Models**: Browse the available LoRA models in the repository.
+## LoRA Models
+For a detailed list of available LoRA models, please refer to the [LORA_MODELS.md](LORA_MODELS.md) file in the repository.
 
 ## Contributing
 Contributions are welcome! If you would like to contribute to this repository, please follow these steps:
@@ -48,11 +40,6 @@ Contributions are welcome! If you would like to contribute to this repository, p
 5. **Open a Pull Request** detailing your changes.
 
 **Note**: Follow the guidelines already set in [LORA_MODELS.md](LORA_MODELS.md).
-
-## LoRA Models
-For a detailed list of available LoRA models, please refer to the [LORA_MODELS.md](LORA_MODELS.md) file in the repository.
-
-**Note**: Follow the guidelines already set in LORA_MODELS.md.
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for more information.
