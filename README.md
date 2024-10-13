@@ -4,7 +4,7 @@
 
 ## Table of Contents
 - [Features](#features)
-- [LoRA Models](#lora-models)
+- [LoRA Models](LORA_MODELS.md)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
