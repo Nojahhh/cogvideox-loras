@@ -53,7 +53,7 @@ Contributions are welcome! If you would like to contribute to this repository, p
 7. **Open a Pull Request** detailing your changes.
 
 ## License
-This project is licensed under the GNU General Public License v3.0. See the LICENSE file for more information.
+This project is licensed under the MIT License. See the LICENSE file for more information.
 
 ## Contact
 For inquiries or feedback, please contact [mellin.johan@gmail.com].
