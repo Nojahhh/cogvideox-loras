@@ -15,14 +15,22 @@ def get_model_data_from_huggingface(link):
     if 'createdAt' not in data:
       data['createdAt'] = input("Couldn't figure out the created date of the lora. Please enter the created date: ")
     if 'cardData' not in data:
+<<<<<<< HEAD
       data['cardData'] = {'base_model': [input("Couldn't figure out the base model of the lora. Please enter the base model: ").replace('https://huggingface.co/','')]}
     elif 'base_model' not in data['cardData']:
       data['cardData']['base_model'] = [input("Couldn't figure out the base model of the lora. Please enter the base model: ").replace('https://huggingface.co/','')]
+=======
+      data['cardData'] = {'base_model': [input("Couldn't figure out the base model of the lora. Please enter the base model: ")]}
+      data['cardData']['base_model'] = [model.replace('https://huggingface.co/', '') for model in data['cardData']['base_model']]
+    elif 'base_model' not in data['cardData']:
+      data['cardData']['base_model'] = [input("Couldn't figure out the base model of the lora. Please enter the base model: ")]
+      data['cardData']['base_model'] = [model.replace('https://huggingface.co/', '') for model in data['cardData']['base_model']]
+>>>>>>> cdafa92c155aefb2097d8de1d6bed614dc1853c7
     return {
       'created_at': data.get('createdAt', 'Unknown').split('T')[0],
       'author': data.get('author', 'Unknown'),
       'last_modified': data.get('lastModified', 'Unknown').split('T')[0],
-      'base_model': data.get('cardData', {}).get('base_model', ['Unknown'])[0]
+      'base_model': data.get('cardData', {}).get('base_model', ['Unknown'])
     }
   else:
     print(f"Error: Unable to fetch data from Hugging Face API. Status code: {response.status_code}")
@@ -34,13 +42,16 @@ def get_model_data_from_huggingface(link):
     }
 
 def add_lora_to_list(link, description, base_model, contributor, date_created, last_modified, date_added):
-  entry = f"| [{link.split('/')[-2]+'/'+link.split('/')[-1]}]({link}) | {description} | [{base_model.split('/')[-2]+'/'+base_model.split('/')[-1]}]({'https://huggingface.co/'+base_model}) | {contributor} | {date_created} | {last_modified} | {date_added} |\n"
+  entry = f"| [{link.split('/')[-2]+'/'+link.split('/')[-1]}]({link}) | {description} | [{base_model}]({'https://huggingface.co/'+base_model}) | {contributor} | {date_created} | {last_modified} | {date_added} |\n"
   
   with open("LORA_MODELS.md", "a") as file:
     file.write(entry)
+    print("LoRA model added successfully!")
 
 def main():
   link = input("Enter the Hugging Face link of the LoRA model: ")
+  if not link.startswith("https://huggingface.co/"):
+    link = "https://huggingface.co/" + link
   
   while True:
     description = input("Enter the description of the LoRA model (max 250 characters): ")
@@ -51,6 +62,8 @@ def main():
   
   model_data = get_model_data_from_huggingface(link)
   base_model = model_data['base_model']
+  if isinstance(base_model, list):
+    base_model = base_model[0]
   contributor = model_data['author']
   last_modified = model_data['last_modified']
   date_created = model_data['created_at']
