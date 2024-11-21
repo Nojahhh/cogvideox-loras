@@ -15,11 +15,9 @@ def get_model_data_from_huggingface(link):
     if 'createdAt' not in data:
       data['createdAt'] = input("Couldn't figure out the created date of the lora. Please enter the created date: ")
     if 'cardData' not in data:
-      data['cardData'] = {'base_model': [input("Couldn't figure out the base model of the lora. Please enter the base model: ")]}
-      data['cardData']['base_model'] = data['cardData']['base_model'].replace('https://huggingface.co/', '')
+      data['cardData'] = {'base_model': [input("Couldn't figure out the base model of the lora. Please enter the base model: ").replace('https://huggingface.co/','')]}
     elif 'base_model' not in data['cardData']:
-      data['cardData']['base_model'] = [input("Couldn't figure out the base model of the lora. Please enter the base model: ")]
-      data['cardData']['base_model'] = data['cardData']['base_model'].replace('https://huggingface.co/', '')
+      data['cardData']['base_model'] = [input("Couldn't figure out the base model of the lora. Please enter the base model: ").replace('https://huggingface.co/','')]
     return {
       'created_at': data.get('createdAt', 'Unknown').split('T')[0],
       'author': data.get('author', 'Unknown'),
